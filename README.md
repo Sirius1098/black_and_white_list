@@ -1,4 +1,4 @@
-## 原模块已于21年停更,这几年里陆续出现了面具以外的其他root管理器使得模块可以安装不能运行,frok仓库以适配,零基础小白,代码是grok写的,全部开源
+## 原模块已于21年停更,frok仓库适配KSU和AP,零基础小白,代码是grok写的,全部开源😉
 
 # black_and_white_list
 [![Stars](https://img.shields.io/github/stars/Petit-Abba/black_and_white_list?label=stars)](https://github.com/Petit-Abba)
