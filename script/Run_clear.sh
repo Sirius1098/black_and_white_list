@@ -132,7 +132,7 @@ if [[ "$Screen" == "亮屏" ]]; then
 
   FILE="$(cat $tmp_date/file)"
   DIR="$(cat $tmp_date/dir)"
-  sed -i "/^description=/c description=CROND: [ 今日已清除: $FILE个黑名单文件 | $DIR个黑名单文件夹 ] - Repo: https://github.com/Petit-Abba/black_and_white_list/" "${MODDIR%/script}/module.prop"
+  sed -i "/^description=/c description=CROND: [ 今日已清除: $FILE个黑名单文件 | $DIR个黑名单文件夹 ] - Repo: https://github.com/Sirius1098/black_and_white_list/" "${MODDIR%/script}/module.prop"
 else
   echo "- 息屏状态"
   if [[ -f $MODDIR/tmp/Screen_on ]]; then
