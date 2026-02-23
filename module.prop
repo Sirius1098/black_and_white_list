@@ -2,5 +2,5 @@ id=crond_clear_the_blacklist
 name=crond 清理黑名单列表
 version=v5.0.0 (26/02/23)
 versionCode=20260223
-author=Sirius1098 & 阿巴酱(Petit-Abba)
+author=Sirius1098
 description=CROND: [ 等待刷新.. ] Repo: https://github.com/Sirius1098/black_and_white_list
