@@ -1,9 +1,22 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
 . $MODDIR/script/clear_the_blacklist_functions.sh
-MAGISK_TMP=$(magisk --path 2>/dev/null)
-[[ -z $MAGISK_TMP ]] && MAGISK_TMP="/sbin"
-alias crond="$MAGISK_TMP/.magisk/busybox/crond"
+
+# === KernelSU / APatch / Magisk 通用 busybox 兼容 ===
+if [ -n "$KSU" ]; then
+    # KernelSU
+    BUSYBOX="/data/adb/ksu/bin/busybox"
+    alias crond="$BUSYBOX crond"
+elif [ -f "/data/adb/ap/bin/busybox" ]; then
+    # APatch
+    BUSYBOX="/data/adb/ap/bin/busybox"
+    alias crond="$BUSYBOX crond"
+else
+    # Magisk（保持原样）
+    MAGISK_TMP=$(magisk --path 2>/dev/null)
+    [[ -z $MAGISK_TMP ]] && MAGISK_TMP="/sbin"
+    alias crond="$MAGISK_TMP/.magisk/busybox/crond"
+fi
 #alias bash="$MODDIR/bin/bash"
 chmod -R 0777 $MODDIR
 chmod -R 0777 $black_and_white_list_path
